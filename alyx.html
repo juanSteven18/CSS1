@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Half-Life Wiki Vista Principal</title>
+
+    <style>
+        body {
+            background-image: url('recursos/alyx/images.jfif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #1a1a1a;
+            color: #222;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header,
+        main,
+        footer {
+            background-color: #7896b1;
+            max-width: 950px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        section article {
+            background-color: rgba(220, 237, 241, 0.8);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        /* --- Estilos y efectos para la ruleta --- */
+        .indice-alfabetico {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .indice-alfabetico a {
+            color: #1a1a1a;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .indice-alfabetico a:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        .ruleta-carrusel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 15px 5px 25px 5px;
+            scrollbar-width: thin;
+        }
+
+        .tarjeta-ruleta {
+            flex: 0 0 240px;
+            scroll-snap-align: center;
+            background: rgba(220, 237, 241, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-ruleta:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+            z-index: 5;
+        }
+
+        .tarjeta-ruleta img {
+            border-radius: 6px;
+            object-fit: cover;
+            width: 100%;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <figure>
+            <figcaption><b>Half-Life Enciclopedia</b></figcaption>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Half Life</a></li>
+                <li><a href="hl2.html">Half-Life 2</a></li>
+                <li><a href="episodios.html">Episodios</a></li>
+                <li><a href="alyx.html">Half-Life Alyx</a></li>
+            </ul>
+        </nav>
+        <form>
+            <label>Buscar en la Wiki:</label>
+            <input type="search" id="busqueda" name="q" placeholder="Ej. Gordon Freeman, Strider...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+
+        <div style="text-align: center; margin: 15px 0;">
+            <p><small>Banda sonora de ambientacion:</small></p>
+            <audio controls loop>
+                <source src="recursos\alyx\10 Calabi-Yau Model.flac" type="audio/mpeg">
+            </audio>
+        </div>
+        <!-- Seccion principal -->
+        <section>
+            <article>
+                <h1>Half-Life Alyx</h1>
+                <p><q>Olvida todo lo que sabes sobre las reglas. Aquí adentro, tú las creas.</q> —
+                    <strong>Russell</strong>
+                </p>
+                <img src="recursos\alyx\alyx_citadel.png" height="500" width="500" alt="Half-Life Alyx Citadel">
+
+
+                <!-- Indice de contenido -->
+                <nav>
+                    <h3>Contenido</h3>
+                    <ol>
+                        <li><a href="#desc">Descripcion</a></li>
+                        <li><a href="#pe">Personajes</a></li>
+                        <li><a href="#enemi">Enemigos</a></li>
+                        <li><a href="#aside">Enlaces de interes</a></li>
+                        <li><a href="#info">Informacion de Utilidad</a></li>
+                    </ol>
+                </nav>
+
+                <!-- Trama -->
+                <div id="desc">
+                    <h2>Descripcion: La Precuela en Realidad Virtual</h2>
+                    <p><b>La Zona de Cuarentena:</b> Ambientada cinco años antes de los sucesos de <em>Half-Life 2</em>,
+                        el juego sigue a <strong>Alyx Vance</strong> y a su padre, el Dr. Eli Vance, mientras organizan
+                        los inicios de la Resistencia humana clandestina contra el brutal y opresivo control de la
+                        Alianza en Ciudad 17.</p>
+                    <p>Tras enterarse de que la Alianza está construyendo una gigantesca superarma secreta encerrada en
+                        una estructura flotante conocida como <strong>La Bóveda</strong>, Alyx se embarca en una misión
+                        desesperada para rescatar a su padre y asegurar un recurso tecnológico capaz de cambiar el
+                        destino de la humanidad para siempre.</p>
+                    <p><q>¡Russell, necesito más resina para mejorar mi pistola de energía!</q> — <strong>Alyx
+                            Vance</strong></p>
+
+                    <p><b>Progreso de exploración de la Zona de Cuarentena:</b> <progress value="90"
+                            max="100">90%</progress></p>
+                    <p><b>Estado del bloqueo de La Bóveda:</b> <progress value="100" max="100">100% - Brecha
+                            detectada</progress></p>
+                </div>
+
+                <!-- Listas de Personajes y Enemigos/ ruleta -->
+                <div id="pe">
+                    <h2>Personajes Principales</h2>
+                    
+                    <nav class="indice-alfabetico" aria-label="Índice alfabético de personajes">
+                        <span>Filtrar:</span>
+                        <a href="#char-alyx">A</a>
+                        <a href="#char-eli">E</a>
+                        <a href="#char-gary">G</a>
+                        <a href="#char-russel">R</a>
+                    </nav>
+
+                    <div class="ruleta-carrusel">
+                        <article class="tarjeta-ruleta" id="char-alyx">
+                            <figure>
+                                <img src="recursos\HL2\alyx.jfif" alt="Alyx Vance" width="200" height="150">
+                                <figcaption><b>Alyx Vance</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Protagonista principal del juego. Una joven ingeniosa y valiente equipada con
+                                    herramientas de pirateo y los icónicos Guantes de Gravedad que le permiten atraer
+                                    objetos a distancia.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-eli">
+                            <figure>
+                                <img src="recursos\alyx\eli.jfif" alt="Eli Vance" width="200" height="150">
+                                <figcaption><b>Dr. Eli Vance</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Líder científico y padre de Alyx. Sus conocimientos avanzados sobre la tecnología
+                                    Combine son vitales para descifrar los planes de los invasores antes de ser
+                                    capturado.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-gary">
+                            <figure>
+                                <img src="recursos\alyx\gary.jfif" alt="Gary el Vort" width="200" height="150">
+                                <figcaption><b>Gary el Vortigaunt</b> <mark>(Aliado)</mark></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Un enigmático y sabio miembro de los Vortigaunts que utiliza su conexión con el
+                                    Vorti-corriente para ayudar a Alyx, mostrando destellos de clarividencia sobre el
+                                    futuro de Freeman.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-russel">
+                            <figure>
+                                <img src="recursos\alyx\russel.jfif" alt="Russell" width="200" height="150">
+                                <figcaption><b>Russell</b> <mark>(Nuevo)</mark></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Científico excéntrico, bromista y brillante de la resistencia que guía a Alyx por
+                                    radio a lo largo de su aventura, además de ser el creador de los guantes
+                                    gravitatorios y múltiples artilugios.</p>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Enemigos -->
+                <div id="enemi">
+                    <h2>Enemigos y Amenazas de la Zona de Cuarentena</h2>
+                    
+                    <nav class="indice-alfabetico" aria-label="Índice alfabético de enemigos">
+                        <span>Filtrar:</span>
+                        <a href="#en-grunt">G</a>
+                        <a href="#en-heavy">H</a>
+                        <a href="#en-hormiga">H</a>
+                        <a href="#en-jeff">J</a>
+                        <a href="#en-reviver">P</a>
+                    </nav>
+
+                    <div class="ruleta-carrusel">
+                        <article class="tarjeta-ruleta" id="en-grunt">
+                            <figure>
+                                <img src="recursos\alyx\grunt.jfif" alt="Combine Grunt" width="200" height="150">
+                                <figcaption><b>Soldado Grunt de la Alianza</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Infantería estándar de la Alianza en las primeras etapas de ocupación urbana.
+                                    Altamente coordinados y tácticos en entornos cerrados de realidad virtual.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="65" title="65%">65%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-heavy">
+                            <figure>
+                                <img src="recursos\alyx\heavy.jfif" alt="Combine Heavy" width="200" height="150">
+                                <figcaption><b>Soldado Pesado (Heavy)</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Una variante acorazada masiva equipada con ametralladoras pesadas y visores
+                                    reforzados que requiere tácticas de flanqueo avanzadas para ser derrotada.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="92" title="92%">92%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-hormiga">
+                            <figure>
+                                <img src="recursos\alyx\hormiga.jfif" alt="Hormiga León" width="200" height="150">
+                                <figcaption><b>Hormigas León</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Criaturas agresivas que emergen de los suelos y escombros de la Zona de Cuarentena.
+                                    Son extremadamente rápidas y reaccionan de inmediato ante cualquier vibración.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="75" title="75%">75%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-jeff">
+                            <figure>
+                                <img src="recursos\alyx\jeff.jfif" alt="Jeff" width="200" height="150">
+                                <figcaption><b>Jeff</b> <mark>(Jeff)</mark></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>El infame y aterrador mutante ciego de la destilería de Northern Star. Es
+                                    completamente invulnerable a las balas comunes y caza exclusivamente guiado por el
+                                    sonido (¡cuidado con toser o tirar una botella cerca de él!).</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="100"
+                                        title="100%">100%</meter></p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-reviver">
+                            <figure>
+                                <img src="recursos\alyx\reviver.jfif" alt="Lightning Dog" width="200" height="150">
+                                <figcaption><b>Perro Eléctrico (Resucitador)</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Una criatura extraña y peligrosa originaria de Xen que almacena energía bioeléctrica
+                                    letal capaz de freír los sistemas de protección de Alyx.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="85" title="85%">85%</meter>
+                                </p>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <aside id="aside">
+                    <h3>Enlaces de Interés y Consola VR</h3>
+                    <p>Conoce más sobre la tecnología de Realidad Virtual y Valve:</p>
+                    <ul>
+                        <li><a href="https://www.valvesoftware.com" target="_blank">Sitio Oficial de Valve</a></li>
+                        <li><a href="https://www.steamvr.com" target="_blank">Portal Oficial de SteamVR</a></li>
+                    </ul>
+
+                    <article>
+                        <h3>Consola de Desarrollador (Especial VR)</h3>
+                        <p>Al estar diseñado puramente para visores de Realidad Virtual, el motor Source 2 incluye
+                            comandos específicos de calibración y depuración:</p>
+                        <dl>
+                            <dt><kbd>vr_enabled 1</kbd></dt>
+                            <dd>Fuerza la inicialización del entorno de Realidad Virtual en el sistema.</dd>
+
+                            <dt><kbd>hlvr_spectator_camera 1</kbd></dt>
+                            <dd>Habilita la ventana de visualización en el monitor del escritorio para espectadores.
+                            </dd>
+
+                            <dt><kbd>r_drawcontroller 1</kbd></dt>
+                            <dd>Muestra de forma gráfica los mandos de VR en la pantalla de depuración.</dd>
+
+                            <dt><kbd>sv_infinite_aux_power 1</kbd></dt>
+                            <dd>Proporciona energía ininterrumpida a las herramientas multipropósito de Alyx.</dd>
+                        </dl>
+                    </article>
+                </aside>
+
+                <br>
+                <br>
+                <section id="info">
+                    <h3>Informacion de Utilidad de Half-Life: Alyx</h3>
+                    <table border="2 px">
+                        <tr>
+                            <th>Desarrolladora</th>
+                            <td>Valve</td>
+                        </tr>
+                        <tr>
+                            <th>Lanzamiento</th>
+                            <td><del>2019</del> <ins>23 de marzo de 2020</ins></td>
+                        </tr>
+                        <tr>
+                            <th>Genero</th>
+                            <td>Shooter en primera persona / Realidad Virtual (VR)</td>
+                        </tr>
+                        <tr>
+                            <th>Requisitos del sistema</th>
+                            <td>Procesador Core i5-7500 / Ryzen 5 1600, 12 GB RAM, Gráfica GTX 1060 / RX 580 + Visor VR
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <br>
+                    <h3>Deja tu opinión sobre el juego</h3>
+                    <form action="/api/feedback" method="POST">
+                        <fieldset>
+                            <legend>Formulario de Feedback</legend>
+                            <p>
+                                <label for="nombre">Tu nombre:</label><br>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Freeman_99">
+                            </p>
+                            <p>
+                                <label for="opinion">¿Qué te pareció?</label><br>
+                                <textarea id="opinion" name="opinion" rows="4" cols="40"
+                                    placeholder="Escribe tus impresiones..."></textarea>
+                            </p>
+                            <p>
+                                <label for="valoracion">Calificación (1 al 5):</label>
+                                <input type="number" id="valoracion" name="valoracion" min="1" max="5" value="5">
+                            </p>
+                            <button type="submit">Enviar comentario</button>
+                        </fieldset>
+                    </form>
+                </section>
+            </article>
+        </section>
+    </main>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <section>
+            <p>&copy; 2026 Half-Life Wiki - Proyecto Académico.</p>
+            <p><small><b>Aclaratoria de autoría y derechos:</b> Todos los recursos multimedia, imágenes, logotipos y
+                    referencias textuales utilizados en este sitio web pertenecen en su totalidad a sus respectivos
+                    dueños y creadores (© Valve Corporation, Fandom Inc.). Este material ha sido recopilado con fines
+                    estrictamente educativos, informativos y sin ánimo de lucro para el desarrollo de una práctica
+                    universitaria.</small></p>
+        </section>
+        <address>
+            Desarrollado por el equipo de ingeniería para la cátedra de tecnologías web.
+        </address>
+    </footer>
+</body>
+
+</html>

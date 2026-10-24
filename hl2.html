@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Half-Life Wiki Vista Principal</title>
+
+    <style>
+        body {
+            background-image: url('recursos/HL2/fongo.jfif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #1a1a1a;
+            color: #222;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header,
+        main,
+        footer {
+            background-color: #5B7C99;
+            max-width: 950px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        section article {
+            background-color: rgba(220, 237, 241, 0.8);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        /* --- estilos para el carrusel --- */
+        .indice-alfabetico {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .indice-alfabetico a {
+            color: #1a1a1a;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .indice-alfabetico a:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        .ruleta-carrusel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 15px 5px 25px 5px;
+            scrollbar-width: thin;
+        }
+
+        .tarjeta-ruleta {
+            flex: 0 0 240px;
+            scroll-snap-align: center;
+            background: rgba(220, 237, 241, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-ruleta:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+            z-index: 5;
+        }
+
+        .tarjeta-ruleta img {
+            border-radius: 6px;
+            object-fit: cover;
+            width: 100%;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <figure>
+            <figcaption><b>Half-Life Enciclopedia</b></figcaption>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Half Life</a></li>
+                <li><a href="hl2.html">Half-Life 2</a></li>
+                <li><a href="episodios.html">Episodios</a></li>
+                <li><a href="alyx.html">Half-Life Alyx</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+
+        <div style="text-align: center; margin: 15px 0;">
+            <p><small>Banda sonora de ambientacion:</small></p>
+            <audio controls loop>
+                <source src="recursos\HL2\24 You're Not Supposed to Be Here.flac" type="audio/mpeg">
+            </audio>
+        </div>
+        <!-- Seccion principal -->
+        <section>
+            <article>
+                <h1>Half-Life 2</h1>
+                <p><q>El hombre adecuado en el sitio equivocado puede cambiar el rumbo del mundo.</q> — <strong>The
+                        G-Man</strong></p>
+                <img src="recursos\HL2\wallpaper_half-life_2_01_1600.jpg" height="500" width="500" alt="Wallpaper Half-Life 2">
+
+                <!-- Indice de contenido -->
+                <nav>
+                    <h3>Contenido</h3>
+                    <ol>
+                        <li><a href="#desc">Descripcion</a></li>
+                        <li><a href="#pe">Personajes</a></li>
+                        <li><a href="#enemi">Enemigos</a></li>
+                        <li><a href="#aside">Enlaces de interes</a></li>
+                        <li><a href="#info">Informacion de Utilidad</a></li>
+                    </ol>
+                </nav>
+
+                <!-- Trama -->
+                <div id="desc">
+                    <h2>Descripcion de Half-Life 2</h2>
+                    <p><b>El Despertar:</b> Han pasado unos 20 años desde el desastre de Black Mesa. Gordon Freeman es
+                        despertado de su estasis por el misterioso <em>G-Man</em> en un tren que llega a <strong>Ciudad
+                            17</strong>.</p>
+                    <p><b>La Ocupación de la Alianza:</b> La Tierra ha sido conquistada y sojuzgada en pocas horas por
+                        un imperio interdimensional conocido como la <strong>Alianza (Combine)</strong>. El
+                        exadministrador de Black Mesa, el Dr. Wallace Breen, gobierna la Tierra como su representante
+                        títere desde la Ciudadela.</p>
+                    <p><b>La Resistencia:</b> Gordon se une rápidamente a un movimiento clandestino de resistencia
+                        liderado por viejos conocidos como Alyx Vance y Barney Calhoun, con el objetivo de liberar a la
+                        humanidad del yugo opresor de la Alianza.</p>
+                </div>
+
+                <!-- Listas de Personajes / ruleta -->
+                <div id="pe">
+                    <h2>Personajes Principales</h2>
+                    
+                    <nav class="indice-alfabetico" aria-label="Índice alfabético de personajes">
+                        <span>Filtrar:</span>
+                        <a href="#char-alyx">A</a>
+                        <a href="#char-barney">B</a>
+                        <a href="#char-breen">B</a>
+                        <a href="#char-eli">E</a>
+                        <a href="#char-kleiner">K</a>
+                        <a href="#char-mossman">M</a>
+                    </nav>
+
+                    <div class="ruleta-carrusel">
+                        <article class="tarjeta-ruleta" id="char-alyx">
+                            <figure>
+                                <img src="recursos\HL2\alyx.jfif" alt="Alyx Vance" width="200" height="150">
+                                <figcaption><b>Alyx Vance</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Figura central de la Resistencia, brillante tecnóloga y compañera inseparable de
+                                    Gordon en la lucha contra la Alianza.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-barney">
+                            <figure>
+                                <img src="recursos\HL2\pollo.jfif" alt="Barney Calhoun" width="200" height="150">
+                                <figcaption><b>Barney Calhoun</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Exguardia de seguridad de Black Mesa que ahora trabaja encubierto como policía de la
+                                    Alianza (Civil Protection) para ayudar a la Resistencia.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-breen">
+                            <figure>
+                                <img src="recursos\HL2\ijueputa.jfif" alt="Dr. Wallace Breen" width="200" height="150">
+                                <figcaption><b>Dr. Wallace Breen</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Antiguo administrador de Black Mesa que negoció la rendición humana tras la Guerra de
+                                    las Siete Horas. Ahora gobierna como dictador títere de la Alianza.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-eli">
+                            <figure>
+                                <img src="recursos\HL2\criko.jfif" alt="Dr. Eli Vance" width="200" height="150">
+                                <figcaption><b>Dr. Eli Vance</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Científico superviviente de Black Mesa y uno de los líderes principales de la base
+                                    secreta Black Mesa East.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-kleiner">
+                            <figure>
+                                <img src="recursos\HL2\Kleiner_bust.webp" alt="Dr. Isaac Kleiner" width="200" height="150">
+                                <figcaption><b>Dr. Isaac Kleiner</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Científico excéntrico que opera un laboratorio secreto en Ciudad 17. Es el tutor de
+                                    Lamarr, su Headcrab mascota sin aguijón.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-mossman">
+                            <figure>
+                                <img src="recursos\HL2\judi.jfif" alt="Dra. Judith Mossman" width="200" height="150">
+                                <figcaption><b>Dra. Judith Mossman</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Científica colaboradora en Black Mesa East cuyas verdaderas intenciones y lealtades
+                                    hacia la Resistencia son ambiguas y complejas.</p>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="enemi">
+                    <h2>Enemigos Principales</h2>
+                    
+                    <nav class="indice-alfabetico" aria-label="Índice alfabético de enemigos">
+                        <span>Filtrar:</span>
+                        <a href="#en-elite">C</a>
+                        <a href="#en-hormiga">H</a>
+                        <a href="#en-guardian">H</a>
+                        <a href="#en-metrocop">P</a>
+                        <a href="#en-soldados">S</a>
+                        <a href="#en-headcrab">S</a>
+                        <a href="#en-rapido">S</a>
+                        <a href="#en-posioncrab">S</a>
+                        <a href="#en-zombie">Z</a>
+                        <a href="#en-zrapi">Z</a>
+                        <a href="#en-zposion">Z</a>
+                    </nav>
+
+                    <div class="ruleta-carrusel">
+                        <!-- Policía de la Metrópoli -->
+                        <article class="tarjeta-ruleta" id="en-metrocop">
+                            <figure>
+                                <img src="recursos\HL2\metro.jfif" alt="Policía de la Metrópoli" width="200"
+                                    height="150">
+                                <figcaption><b>Policía de la Metrópoli (Metrocop)</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Fuerza policial urbana autoritaria compuesta por humanos que vigilan Ciudad 17
+                                    utilizando porras eléctricas y pistolas.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="40" title="40%">40%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Soldados de la Alianza -->
+                        <article class="tarjeta-ruleta" id="en-soldados">
+                            <figure>
+                                <img src="recursos\HL2\soldados.jfif" alt="Soldados de la Alianza" width="200"
+                                    height="150">
+                                <figcaption><b>Soldados de la Alianza</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Tropas de infantería regulares mejoradas cibernéticamente por la Alianza, altamente
+                                    disciplinadas y equipadas con rifles de pulso.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="70" title="70%">70%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Combine de Elite -->
+                        <article class="tarjeta-ruleta" id="en-elite">
+                            <figure>
+                                <img src="recursos\HL2\elite.jfif" alt="Combine de Elite" width="200"
+                                    height="150">
+                                <figcaption><b>Combine de Elite</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>La unidad más letal de la infantería de la Alianza, reconocidos por su armadura
+                                    blanca y su letal rifle de energía oscura (AR2).</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="95" title="95%">95%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Saltacabezas Clásico -->
+                        <article class="tarjeta-ruleta" id="en-headcrab">
+                            <figure>
+                                <img src="recursos\HL2\headcrab.jfif" alt="Saltacabezas Clásico" width="200"
+                                    height="150">
+                                <figcaption><b>Saltacabezas</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>La variante tradicional heredada del desastre de Black Mesa; un parásito ágil que
+                                    busca saltar a la cabeza de sus víctimas.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="30" title="30%">30%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Saltacabezas Rápido -->
+                        <article class="tarjeta-ruleta" id="en-rapido">
+                            <figure>
+                                <img src="recursos\HL2\rapido.jfif" alt="Saltacabezas Rápido" width="200"
+                                    height="150">
+                                <figcaption><b>Saltacabezas Rápido</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Una especie más delgada, pálida y extremadamente veloz capaz de dar saltos
+                                    descomunales para desorientar a Gordon.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="55" title="55%">55%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Saltacabezas Venenoso -->
+                        <article class="tarjeta-ruleta" id="en-posioncrab">
+                            <figure>
+                                <img src="recursos\HL2\posioncrab.jfif" alt="Saltacabezas Venenoso" width="200"
+                                    height="150">
+                                <figcaption><b>Saltacabezas Venenoso</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Un saltacabezas peludo de color oscuro que inyecta una neurotoxina letal, dejando la
+                                    salud de Gordon en tan solo 1 punto de vida.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="80" title="80%">80%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Zombie Estándar -->
+                        <article class="tarjeta-ruleta" id="en-zombie">
+                            <figure>
+                                <img src="recursos\HL2\zombie.jfif" alt="Zombie Estándar" width="200"
+                                    height="150">
+                                <figcaption><b>Zombie Estándar</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Cuerpo humano devorado y controlado por un Headcrab clásico, que ataca desgarrando
+                                    con sus garras y emitiendo gritos agónicos.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="50" title="50%">50%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Zombie Rápido -->
+                        <article class="tarjeta-ruleta" id="en-zrapi">
+                            <figure>
+                                <img src="recursos\HL2\Zrapi.jfif" alt="Zombie Rápido" width="200" height="150">
+                                <figcaption><b>Zombie Rápido</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Resultado de un Headcrab rápido; un esqueleto humano desollado extremadamente ágil
+                                    capaz de trepar paredes y dar saltos descomunales.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="75" title="75%">75%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Zombie Venenoso -->
+                        <article class="tarjeta-ruleta" id="en-zposion">
+                            <figure>
+                                <img src="recursos\HL2\Zposion.jfif" alt="Zombie Venenoso" width="200"
+                                    height="150">
+                                <figcaption><b>Zombie Venenoso</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Porta múltiples headcrabs venenosos en su espalda que puede lanzar a distancia para
+                                    dejar la salud de Gordon al mínimo de un golpe.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="85" title="85%">85%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Hormigas León -->
+                        <article class="tarjeta-ruleta" id="en-hormiga">
+                            <figure>
+                                <img src="recursos\HL2\hormiga.jfif" alt="Hormigas León" width="200" height="150">
+                                <figcaption><b>Hormigas León (Antlions)</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Criaturas agresivas nativas de los arenales y la costa que atacan en enjambre desde
+                                    el subsuelo, aunque pueden ser controladas usando ferópodos.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="60" title="60%">60%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Hormiga León Guardiana -->
+                        <article class="tarjeta-ruleta" id="en-guardian">
+                            <figure>
+                                <img src="recursos\HL2\guardian.jfif" alt="Hormiga León Guardiana" width="200"
+                                    height="150">
+                                <figcaption><b>Hormiga León Guardiana</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Una colosal y pesada variante acorazada capaz de desatar cargas devastadoras y
+                                    sacudir el suelo con una fuerza destructiva tremenda.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="98" title="98%">98%</meter>
+                                </p>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <aside id="aside">
+                    <h3>Enlaces de Interés y Noticias</h3>
+                    <p>¿Quieres saber más sobre los creadores del juego? Visita los sitios oficiales:</p>
+                    <ul>
+                        <li><a href="https://www.valvesoftware.com" target="_blank">Sitio Oficial de Valve</a></li>
+                        <li><a href="https://store.steampowered.com" target="_blank">Página de Steam de Half-Life</a>
+                        </li>
+                    </ul>
+
+                    <article>
+                        <h3>Consola de Desarrollador</h3>
+                        <p>¿Sabías que puedes habilitar la consola presionando la tecla <kbd>~</kbd> en el juego? Aquí
+                            tienes algunos comandos clásicos del motor Source:</p>
+                        <ul>
+                            <li><kbd>sv_cheats 1</kbd>: Habilita el modo de comandos de trampa.</li>
+                            <li><kbd>god</kbd>: Activa la invulnerabilidad total para el jugador.</li>
+                            <li><kbd>noclip</kbd>: Permite volar a través de los muros y mapas libremente.</li>
+                            <li><kbd>impulse 101</kbd>: Otorga todo el arsenal de armas con munición al máximo.</li>
+                        </ul>
+                    </article>
+                </aside>
+
+                <br>
+                <br>
+                <section id="info">
+                    <h3>Informacion de Utilidad</h3>
+                    <table border="2 px">
+                        <tr>
+                            <th>Desarrolladora</th>
+                            <td>Valve</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha de lanzamiento</th>
+                            <td><time datetime="2004-11-16">16 de noviembre, 2004</time></td>
+                        </tr>
+                        <tr>
+                            <th>Genero</th>
+                            <td>Shooter en primera persona / Acción y aventura</td>
+                        </tr>
+                        <tr>
+                            <th>Requisitos del sistema</th>
+                            <td>Procesador 1.2 GHz, 256 MB RAM, tarjeta gráfica compatible con DirectX 7</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+        </section>
+    </main>
+    <br>
+    <br>
+    <br>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <section>
+            <p>&copy; 2026 Half-Life Wiki - Proyecto Académico.</p>
+            <p><small><b>Aclaratoria de autoría y derechos:</b> Todos los recursos multimedia, imágenes, logotipos y
+                    referencias textuales utilizados en este sitio web pertenecen en su totalidad a sus respectivos
+                    dueños y creadores (© Valve Corporation, Fandom Inc.). Este material ha sido recopilado con fines
+                    estrictamente educativos, informativos y sin ánimo de lucro para el desarrollo de una práctica
+                    universitaria.</small></p>
+        </section>
+        <address>
+            Desarrollado por el equipo de ingeniería para la cátedra de tecnologías web.
+        </address>
+    </footer>
+</body>
+
+</html>

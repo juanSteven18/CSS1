@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Half-Life Wiki Vista Principal</title>
+
+    <style>
+        body {
+            background-image: url('recursos/HL2/fongo.jfif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #1a1a1a;
+            color: #222;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header,
+        main,
+        footer {
+            background-color: #7896b1;
+            max-width: 950px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        section article {
+            background-color: rgba(220, 237, 241, 0.8);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        /* --- Estilos de ruleta --- */
+        .indice-alfabetico {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .indice-alfabetico a {
+            color: #1a1a1a;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .indice-alfabetico a:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        .ruleta-carrusel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 15px 5px 25px 5px;
+            scrollbar-width: thin;
+        }
+
+        .tarjeta-ruleta {
+            flex: 0 0 240px;
+            scroll-snap-align: center;
+            background: rgba(220, 237, 241, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-ruleta:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+            z-index: 5;
+        }
+
+        .tarjeta-ruleta img {
+            border-radius: 6px;
+            object-fit: cover;
+            width: 100%;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <figure>
+            <figcaption><b>Half-Life Enciclopedia</b></figcaption>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Half-Life</a></li>
+                <li><a href="hl2.html">Half-Life 2</a></li>
+                <li><a href="episodios.html">Episodios</a></li>
+                <li><a href="alyx.html">Half-Life Alyx</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+
+        <div style="text-align: center; margin: 15px 0;">
+            <p><small>Banda sonora de ambientacion:</small></p>
+            <audio controls loop>
+                <source src="recursos\Episodios\07 What Kind Of Hospital Is This.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <!-- Seccion principal -->
+        <section>
+            <article>
+                <h1>Half-Life 2: Episodios</h1>
+                <p><q>Nosotros servimos al mismo misterio</q> — <strong>Los Vortigaunts</strong></p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <img src="recursos\Episodios\wall 2.jfif" height="300" width="350" alt="Wall Episode One">
+                    <img src="recursos\Episodios\wall.jfif" height="300" width="350" alt="Wall Episode Two">
+                </div>
+
+                <!-- Indice de contenido -->
+                <nav>
+                    <h3>Contenido</h3>
+                    <ol>
+                        <li><a href="#desc">Descripcion</a></li>
+                        <li><a href="#pe">Personajes</a></li>
+                        <li><a href="#enemi">Enemigos</a></li>
+                        <li><a href="#aside">Enlaces de interes</a></li>
+                        <li><a href="#info">Informacion de Utilidad</a></li>
+                    </ol>
+                </nav>
+
+                <!-- Trama -->
+                <div id="desc">
+                    <h2>Descripcion: Episodios 1 y 2</h2>
+
+                    <h3>Half-Life 2: Episode One</h3>
+                    <p><b>La Carrera contra el Tiempo:</b> Tras los eventos en la Ciudadela al final del juego base, el
+                        núcleo de energía de la Alianza ha entrado en una fase crítica de fusión incontrolada. Gordon y
+                        Alyx deben adentrarse de nuevo en las ruinas de <em>Ciudad 17</em> para estabilizar
+                        temporalmente el núcleo, descargar un paquete de datos vital y evacuar a los últimos
+                        supervivientes en tren antes de que la Ciudadela detone.</p>
+                    <p><q>¿Que clase de hostipal es este?</q> — <strong>Alyx</strong></p>
+                    <p><b>Progreso de la evacuación de Ciudad 17:</b> <progress value="85" max="100">85%</progress></p>
+
+                    <h3>Half-Life 2: Episode Two</h3>
+                    <p><b>El Superportal:</b> El tren descarrila debido a la onda expansiva de la detonación. Gordon y
+                        Alyx deben atravesar los peligrosos bosques y bases exteriores infestas de enemigos hasta llegar
+                        a <strong>White Forest</strong>, una instalación secreta de la Resistencia. Allí planean enviar
+                        un satélite al espacio para activar un cohete y cerrar permanentemente el enorme portal
+                        dimensional que la Alianza ha abierto en el cielo.</p>
+                    <p><q>Preparate para consecuencias imprevistas</q> — <strong>G-Man</strong></p>
+                    <p><b>Estado del lanzamiento del satélite:</b> <progress value="100" max="100">100% -
+                            Éxito</progress></p>
+                </div>
+
+                <!-- Listas de Personajes y Enemigos / ruleta -->
+                <div id="pe">
+                    <h2>Personajes Principales y Nuevas Incorporaciones</h2>
+                    
+                    <nav class="indice-alfabetico" aria-label="Índice alfabético de personajes">
+                        <span>Filtrar:</span>
+                        <a href="#char-magnusson">A</a>
+                        <a href="#char-gordon-alyx">G</a>
+                        <a href="#char-eli-kleiner">L</a>
+                    </nav>
+
+                    <div class="ruleta-carrusel">
+                        <!-- Regreso de los Clásicos -->
+                        <article class="tarjeta-ruleta" id="char-gordon-alyx">
+                            <figure>
+                                <img src="recursos\Episodios\gordoalyx.jfif" alt="Gordon y Alyx" width="200"
+                                    height="150">
+                                <figcaption><b>Gordon Freeman y Alyx Vance</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>El dúo dinámico de la Resistencia. En estos episodios su vínculo emocional y su
+                                    trabajo en equipo se ponen a prueba al límite para salvar a la humanidad.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-eli-kleiner">
+                            <figure>
+                                <img src="recursos\HL2\criko.jfif" alt="Dr. Eli Vance y Dr. Isaac Kleiner" width="200" height="150">
+                                <figcaption><b>Dr. Eli Vance y Dr. Isaac Kleiner</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Mentes brillantes de la ciencia y líderes clave de la Resistencia que coordinan la
+                                    operación de lanzamiento del cohete desde White Forest.</p>
+                            </details>
+                        </article>
+
+                        <!-- Nuevo Personaje -->
+                        <article class="tarjeta-ruleta" id="char-magnusson">
+                            <figure>
+                                <img src="recursos\Episodios\magnun.jfif" alt="Dr. Arne Magnusson" width="200"
+                                    height="150">
+                                <figcaption><b>Dr. Arne Magnusson</b> <mark>(Nuevo)</mark></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Antiguo científico de Black Mesa con un carácter sumamente estricto, irascible y
+                                    exigente. Es el cerebro detrás de los dispositivos explosivos diseñados para
+                                    destruir a los Strider de la Alianza.</p>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="enemi">
+                    <h2>Nuevos Enemigos y Variantes</h2>
+                    
+                    <nav class="indice-alfabetico" aria-label="Índice alfabético de enemigos">
+                        <span>Filtrar:</span>
+                        <a href="#en-asesor">A</a>
+                        <a href="#en-cazador">C</a>
+                        <a href="#en-hormiga">H</a>
+                    </nav>
+
+                    <div class="ruleta-carrusel">
+                        <!-- Hormiga León Escupidora -->
+                        <article class="tarjeta-ruleta" id="en-hormiga">
+                            <figure>
+                                <img src="recursos\Episodios\escupidoras.jfif" alt="Hormiga León Escupidora" width="200" height="150">
+                                <figcaption><b>Hormiga León Escupidora (Worker)</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Una subespecie de color verde brillante que no combate cuerpo a cuerpo, sino que
+                                    dispara proyectiles de ácido corrosivo a distancia desde el subsuelo o los túneles.
+                                </p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="70" title="70%">70%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Cazador Combine -->
+                        <article class="tarjeta-ruleta" id="en-cazador">
+                            <figure>
+                                <img src="recursos\Episodios\raptors.jfif" alt="Cazador Combine" width="200" height="150">
+                                <figcaption><b>Cazador de la Alianza (Raptor)</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Ágiles trípodes de combate blindados desplegados en Episode Two. Son rápidos,
+                                    embisten a gran velocidad y disparan dardos de energía letales.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="90" title="90%">90%</meter>
+                                </p>
+                            </details>
+                        </article>
+
+                        <!-- Asesor Combine -->
+                        <article class="tarjeta-ruleta" id="en-asesor">
+                            <figure>
+                                <img src="recursos\Episodios\conse.jfif" alt="Asesor Combine" width="200" height="150">
+                                <figcaption><b>Asesor de la Alianza (Consejero)</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>La cúpula directiva y alienígena de la Alianza. Criaturas con aspecto de larvas
+                                    gigantes flotantes dotadas de un inmenso poder telequinético capaz de paralizar y
+                                    asesinar sin esfuerzo.</p>
+                                <p><b>Nivel de amenaza:</b> <meter min="0" max="100" value="100"
+                                        title="100%">100%</meter></p>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <aside id="aside">
+                    <h3>Enlaces de Interés y Noticias</h3>
+                    <p>¿Quieres saber más sobre los creadores del juego? Visita los sitios oficiales:</p>
+                    <ul>
+                        <li><a href="https://www.valvesoftware.com" target="_blank">Sitio Oficial de Valve</a></li>
+                        <li><a href="https://store.steampowered.com" target="_blank">Página de Steam de Half-Life</a>
+                        </li>
+                    </ul>
+
+                    <article>
+                        <h3>Consola de Desarrollador</h3>
+                        <p>¿Sabías que puedes habilitar la consola presionando la tecla <kbd>~</kbd> en el juego? Aquí
+                            tienes algunos comandos clásicos del motor Source:</p>
+                        <ul>
+                            <li><kbd>sv_cheats 1</kbd>: Habilita el modo de comandos de trampa.</li>
+                            <li><kbd>god</kbd>: Activa la invulnerabilidad total para el jugador.</li>
+                            <li><kbd>noclip</kbd>: Permite volar a través de los muros y mapas libremente.</li>
+                            <li><kbd>impulse 101</kbd>: Otorga todo el arsenal de armas con munición al máximo.</li>
+                        </ul>
+                        <p>Los túneles oscuros de <em>Episode One</em> y los bosques abiertos de <em>Episode Two</em>
+                            exprimen al máximo el motor Source. Aquí tienes comandos de consola avanzados ideales para
+                            esta etapa:</p>
+                        <dl>
+                            <dt><kbd>sv_infinite_aux_power 1</kbd></dt>
+                            <dd>Activa la energía infinita para el sprint y la linterna.</dd>
+
+                            <dt><kbd>phys_pushscale 500</kbd></dt>
+                            <dd>Multiplica la fuerza con la que golpeas objetos con la pistola de gravedad.</dd>
+
+                            <dt><kbd>sk_auto_reload_time 0</kbd></dt>
+                            <dd>Desactiva tiempos muertos de recarga para sobrevivir a las emboscadas en campo abierto
+                                de Episode Two.</dd>
+
+                            <dt><kbd>cl_showfps 1</kbd></dt>
+                            <dd>Muestra los fotogramas por segundo en tiempo real para evaluar el rendimiento gráfico
+                                del juego.</dd>
+                        </dl>
+                    </article>
+                </aside>
+
+                <br>
+                <br>
+                <section id="info">
+                    <h3>Informacion de Utilidad de los Episodios</h3>
+                    <table border="2 px">
+                        <tr>
+                            <th>Desarrolladora</th>
+                            <td>Valve</td>
+                        </tr>
+                        <tr>
+                            <th>Lanzamiento (Episode One)</th>
+                            <td><del>Febrero de 2006</del> <ins>1 de junio de 2006</ins></td>
+                        </tr>
+                        <tr>
+                            <th>Lanzamiento (Episode Two)</th>
+                            <td>October 10, 2007 (PC)</td>
+                        </tr>
+                        <tr>
+                            <th>Genero</th>
+                            <td>Shooter en primera persona / Episódico</td>
+                        </tr>
+                        <tr>
+                            <th>Requisitos del sistema</th>
+                            <td>Procesador 1.7 GHz, 512 MB RAM, tarjeta gráfica compatible con DirectX 9</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+        </section>
+    </main>
+    <br>
+    <br>
+    <br>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <section>
+            <p>&copy; 2026 Half-Life Wiki - Proyecto Académico.</p>
+            <p><small><b>Aclaratoria de autoría y derechos:</b> Todos los recursos multimedia, imágenes, logotipos y
+                    referencias textuales utilizados en este sitio web pertenecen en su totalidad a sus respectivos
+                    dueños y creadores (© Valve Corporation, Fandom Inc.). Este material ha sido recopilado con fines
+                    estrictamente educativos, informativos y sin ánimo de lucro para el desarrollo de una práctica
+                    universitaria.</small></p>
+        </section>
+        <address>
+            Desarrollado por el equipo de ingeniería para la cátedra de tecnologías web.
+        </address>
+    </footer>
+</body>
+
+</html>

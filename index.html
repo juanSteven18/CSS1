@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Half-Life Wiki Vista Principal</title>
+
+    <style>
+        body {
+            background-image: url('recursos/HL1/fondo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #1a1a1a;
+            color: #222;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header,
+        main,
+        footer {
+            background-color: rgba(236, 191, 161, 0.92);
+            max-width: 950px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        section article {
+            background-color: rgba(245, 245, 245, 0.8);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        /* --- Estilos para la ruleta / carrusel --- */
+        .indice-alfabetico {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .indice-alfabetico a {
+            color: #1a1a1a;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .indice-alfabetico a:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        .ruleta-carrusel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 15px 5px 25px 5px;
+            scrollbar-width: thin;
+        }
+
+        .tarjeta-ruleta {
+            flex: 0 0 240px;
+            scroll-snap-align: center;
+            background: rgba(245, 245, 245, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: c 8px 32px 0 rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-ruleta:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+            z-index: 5;
+        }
+
+        .tarjeta-ruleta img {
+            border-radius: 6px;
+            object-fit: cover;
+            width: 100%;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <figure>
+            <figcaption><b>Half-Life Enciclopedia</b></figcaption>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Half Life</a></li>
+                <li><a href="hl2.html">Half-Life 2</a></li>
+                <li><a href="episodios.html">Episodios</a></li>
+                <li><a href="alyx.html">Half-Life Alyx</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+
+        <div style="text-align: center; margin: 15px 0;">
+            <p><small>Banda sonora de ambientacion:</small></p>
+            <audio controls loop>
+                <source src="recursos\HL1\19 Electric Guitar Ambience.flac" type="audio/mpeg">
+            </audio>
+        </div>
+        <!-- Seccion principal -->
+        <section>
+            <article>
+                <h1>Half-Life</h1>
+                <p><q>Gordon Freeman. El hombre que sobrevivio a Black Mesa</q> — <strong>Half-Life </strong></p>
+                <img src="recursos\HL1\HLwallpaper04_16x9.jpg" height="500" width="500" alt="Wallpaper Half-Life">
+
+                <!-- Indice de contenido -->
+                <nav>
+                    <h3>Contenido</h3>
+                    <ol>
+                        <li><a href="#desc">Descripcion</a></li>
+                        <li><a href="#pe">Personajes</a></li>
+                        <li><a href="#enemi">Enemigos</a></li>
+                        <li><a href="#aside">Enlaces de interes</a></li>
+                        <li><a href="#info">Informacion de Utilidad</a></li>
+                    </ol>
+                </nav>
+
+                <!-- Trama -->
+                <div id="desc">
+                    <h2>Descripcion</h2>
+                    <p><b>El Incidente:</b> <em>Gordon Freeman</em>, un joven físico teórico recién graduado del MIT,
+                        llega tarde a su turno de trabajo. Su labor consiste en introducir un material de muestra (un
+                        cristal anómalo) dentro de un espectrómetro de antimateria.</p>
+                    <p><b>La Cascada de Resonancia:</b> Durante la prueba, ocurre un fallo catastrófico imprevisto
+                        conocido como <strong>Cascada de Resonancia</strong> . Esto abre una brecha dimensional masiva
+                        que conecta la Tierra con un mundo alienígena hostil conocido como <em>El Mundo Fronterizo</em>
+                        , o por su nombre oficial <em>Xen</em>.</p>
+                    <p><b>Conflicto:</b> Las instalaciones se llenan rápidamente de criaturas monstruosas. Para empeorar
+                        las cosas, el gobierno de EE. UU. envía a una unidad militar de operaciones encubiertas, la
+                        <em>HECU</em>, con órdenes de eliminar tanto a los alienígenas como a todo el personal de
+                        <b>Black Mesa</b> para encubrir el desastre. Gordon debe sobrevivir abriéndose paso por las
+                        ruinas de las instalaciones.
+                    </p>
+                </div>
+
+                <!-- Listas de Personajes / ahora carrusel con indice  -->
+                <div id="pe">
+                    <h2>Personajes</h2>
+
+                    <nav class="indice-alfabetico" aria-label="Índice alfabético de personajes">
+                        <span>Filtrar:</span>
+                        <a href="#char-gordon">G</a>
+                        <a href="#char-gman">T</a>
+                    </nav>
+
+                    <div class="ruleta-carrusel">
+                        <article class="tarjeta-ruleta" id="char-gordon">
+                            <figure>
+                                <img src="recursos\HL1\gordon-bg.png" alt="Gordon Freeman con traje HEV">
+                                <figcaption><b>Gordon Freeman</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p><em>Protagonista silencioso</em>. Físico teórico recién graduado del MIT que debe
+                                    abrirse paso luchando tras el desastre en Black Mesa.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="char-gman">
+                            <figure>
+                                <img src="recursos\HL1\gman.jfif" alt="The G-Man">
+                                <figcaption><b>The G-Man</b> (El Hombre Gris)</figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del personaje</summary>
+                                <p>Misterioso burócrata interdimensional que observa sigilosamente las acciones de
+                                    Gordon y parece operar bajo motivaciones desconocidas.</p>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Enemigos / ahora tambien como carrusel -->
+                <div id="enemi">
+                    <h2>Enemigos</h2>
+
+                    <nav class="indice-alfabetico" aria-label="Índice alfabético de enemigos">
+                        <span>Filtrar:</span>
+                        <a href="#en-alien">A</a>
+                        <a href="#en-barnacle">B</a>
+                        <a href="#en-bull">B</a>
+                        <a href="#en-garg">G</a>
+                        <a href="#en-gon">G</a>
+                        <a href="#en-h">H</a>
+                        <a href="#en-hound">H</a>
+                        <a href="#en-nihil">N</a>
+                        <a href="#en-vort">V</a>
+                        <a href="#en-zom">Z</a>
+                    </nav>
+
+                    <div class="ruleta-carrusel">
+                        <article class="tarjeta-ruleta" id="en-h">
+                            <figure>
+                                <img src="recursos\HL1\hgrunt.jpg" alt="Soldados HECU">
+                                <figcaption><b>Soldados HECU</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Son una fuerza de operaciones especiales del Cuerpo de Marines de los Estados Unidos
+                                    enviados a Black Mesa para silenciar a los testigos y eliminar las amenazas de la
+                                    <b>Cascada de resonancia</b>
+                                </p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-h">
+                            <figure>
+                                <img src="recursos\HL1\headbcrab.jfif" alt="Headcrab">
+                                <figcaption><b>Headcrab</b> (Saltacabezas)</figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Pequeña criatura alienígena con forma de parásito que salta sobre las cabezas de sus
+                                    víctimas para controlarlas neurológicamente.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-zom">
+                            <figure>
+                                <img src="recursos\HL1\zombie2.jpg" alt="Zombies">
+                                <figcaption><b>Zombies</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Los Zombies son resultado del control mental de los Saltacabezas al conseguir un
+                                    huésped humano, mutando su cuerpo y controlando sus movimientos.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-vort">
+                            <figure>
+                                <img src="recursos\HL1\alien_slave2.jpg" alt="Vortigaunt">
+                                <figcaption><b>Vortigaunt</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Alienígena inteligente esclavizado originario de Xen que ataca lanzando potentes
+                                    rayos de energía verde desde su mano central.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-barnacle">
+                            <figure>
+                                <img src="recursos\HL1\barnacle_notext.jpg" alt="Barnacle">
+                                <figcaption><b>Barnacle</b> (Lapas)</figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Parásitos semejantes a percebes unidos al techo de túneles oscuros y húmedos
+                                    esperando una víctima con su lengua retráctil.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-hound">
+                            <figure>
+                                <img src="recursos\HL1\houndeye_small.jpg" alt="Houndeye">
+                                <figcaption><b>Houndeye</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Especie de Xen de apariencia canina que posee habilidades de ataques sónicos al
+                                    carecer de fuerza física.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-bull">
+                            <figure>
+                                <img src="recursos\HL1\bull.jfif" alt="Bullsquid">
+                                <figcaption><b>Bullsquid</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Criaturas agresivas resistentes a materiales tóxicos/radioactivos, con tentáculos
+                                    rojos y capacidad de escupir sustancias corrosivas.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-alien">
+                            <figure>
+                                <img src="recursos\HL1\aliengrunt.jfif" alt="Alien Grunt">
+                                <figcaption><b>Alien Grunt</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Brazo pesado de la armada de Nihilanth, equipados con armaduras y colmenas de
+                                    Snarks en su brazo derecho.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-garg">
+                            <figure>
+                                <img src="recursos\HL1\gargantua1.jpg" alt="Gargantua">
+                                <figcaption><b>Gargantua</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Tanques vivientes de Xen, resistentes a armas de fuego comunes, con pinzas capaces
+                                    de disparar llamaradas de fuego.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-gon">
+                            <figure>
+                                <img src="recursos\HL1\gonarch1.jpg" alt="Gonarch">
+                                <figcaption><b>Gonarch</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Versión completamente madura de los Saltacabezas con fuerza bruta, movimientos
+                                    rápidos y ataques con líquidos corrosivos.</p>
+                            </details>
+                        </article>
+
+                        <article class="tarjeta-ruleta" id="en-nihil">
+                            <figure>
+                                <img src="recursos\HL1\nilan.jfif" alt="Nihilanth">
+                                <figcaption><b>Nihilanth</b></figcaption>
+                            </figure>
+                            <details>
+                                <summary>Ver detalles del enemigo</summary>
+                                <p>Antagonista principal de Half-Life, con poderes telequinéticos y capacidad de abrir
+                                    portales desde las palmas de sus manos.</p>
+                            </details>
+                        </article>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <aside id="aside">
+                    <h3>Enlaces de Interés y Noticias</h3>
+                    <p>¿Quieres saber más sobre los creadores del juego? Visita los sitios oficiales:</p>
+                    <ul>
+                        <li><a href="https://www.valvesoftware.com" target="_blank">Sitio Oficial de Valve</a></li>
+                        <li><a href="https://store.steampowered.com" target="_blank">Página de Steam de Half-Life</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <br>
+                <br>
+                <section id="info">
+                    <h3>Informacion de Utilidad</h3>
+                    <table border="2 px">
+                        <tr>
+                            <th>Desarrolladora</th>
+                            <td>Valve</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha de lanzamiento</th>
+                            <td>November 19, 1998 (PC) <br> November 14, 2001 (PS2)</td>
+                        </tr>
+                        <tr>
+                            <th>Genero</th>
+                            <td>Shooter en primera persona</td>
+                        </tr>
+                        <tr>
+                            <th>Requisistos del sistema</th>
+                            <td>Procesador 500 MHz, 96 MB RAM</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+        </section>
+    </main>
+    <br>
+    <br>
+    <br>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <section>
+            <p>&copy; 2026 Half-Life Wiki - Proyecto Académico.</p>
+            <p><small><b>Aclaratoria de autoría y derechos:</b> Todos los recursos multimedia, imágenes, logotipos y
+                    referencias textuales utilizados en este sitio web pertenecen en su totalidad a sus respectivos
+                    dueños y creadores (© Valve Corporation, Fandom Inc.). Este material ha sido recopilado con fines
+                    estrictamente educativos, informativos y sin ánimo de lucro para el desarrollo de una práctica
+                    universitaria.</small></p>
+        </section>
+        <address>
+            Desarrollado por el equipo de ingeniería para la cátedra de tecnologías web.
+        </address>
+    </footer>
+</body>
+
+</html>
