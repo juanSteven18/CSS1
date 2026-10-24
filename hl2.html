@@ -6,6 +6,10 @@
     <title>Half-Life Wiki Vista Principal</title>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-image: url('recursos/HL2/fongo.jfif');
             background-size: cover;
@@ -74,6 +78,10 @@
         }
 
         .tarjeta-ruleta {
+            scroll-margin-top: 150px;
+        }
+
+        .tarjeta-ruleta {
             flex: 0 0 240px;
             scroll-snap-align: center;
             background: rgba(220, 237, 241, 0.85);
@@ -132,7 +140,8 @@
                 <h1>Half-Life 2</h1>
                 <p><q>El hombre adecuado en el sitio equivocado puede cambiar el rumbo del mundo.</q> — <strong>The
                         G-Man</strong></p>
-                <img src="recursos\HL2\wallpaper_half-life_2_01_1600.jpg" height="500" width="500" alt="Wallpaper Half-Life 2">
+                <img src="recursos\HL2\wallpaper_half-life_2_01_1600.jpg" height="500" width="500"
+                    alt="Wallpaper Half-Life 2">
 
                 <!-- Indice de contenido -->
                 <nav>
@@ -164,7 +173,7 @@
                 <!-- Listas de Personajes / ruleta -->
                 <div id="pe">
                     <h2>Personajes Principales</h2>
-                    
+
                     <nav class="indice-alfabetico" aria-label="Índice alfabético de personajes">
                         <span>Filtrar:</span>
                         <a href="#char-alyx">A</a>
@@ -226,7 +235,8 @@
 
                         <article class="tarjeta-ruleta" id="char-kleiner">
                             <figure>
-                                <img src="recursos\HL2\Kleiner_bust.webp" alt="Dr. Isaac Kleiner" width="200" height="150">
+                                <img src="recursos\HL2\Kleiner_bust.webp" alt="Dr. Isaac Kleiner" width="200"
+                                    height="150">
                                 <figcaption><b>Dr. Isaac Kleiner</b></figcaption>
                             </figure>
                             <details>
@@ -252,7 +262,7 @@
 
                 <div id="enemi">
                     <h2>Enemigos Principales</h2>
-                    
+
                     <nav class="indice-alfabetico" aria-label="Índice alfabético de enemigos">
                         <span>Filtrar:</span>
                         <a href="#en-elite">C</a>
@@ -304,8 +314,7 @@
                         <!-- Combine de Elite -->
                         <article class="tarjeta-ruleta" id="en-elite">
                             <figure>
-                                <img src="recursos\HL2\elite.jfif" alt="Combine de Elite" width="200"
-                                    height="150">
+                                <img src="recursos\HL2\elite.jfif" alt="Combine de Elite" width="200" height="150">
                                 <figcaption><b>Combine de Elite</b></figcaption>
                             </figure>
                             <details>
@@ -336,8 +345,7 @@
                         <!-- Saltacabezas Rápido -->
                         <article class="tarjeta-ruleta" id="en-rapido">
                             <figure>
-                                <img src="recursos\HL2\rapido.jfif" alt="Saltacabezas Rápido" width="200"
-                                    height="150">
+                                <img src="recursos\HL2\rapido.jfif" alt="Saltacabezas Rápido" width="200" height="150">
                                 <figcaption><b>Saltacabezas Rápido</b></figcaption>
                             </figure>
                             <details>
@@ -368,8 +376,7 @@
                         <!-- Zombie Estándar -->
                         <article class="tarjeta-ruleta" id="en-zombie">
                             <figure>
-                                <img src="recursos\HL2\zombie.jfif" alt="Zombie Estándar" width="200"
-                                    height="150">
+                                <img src="recursos\HL2\zombie.jfif" alt="Zombie Estándar" width="200" height="150">
                                 <figcaption><b>Zombie Estándar</b></figcaption>
                             </figure>
                             <details>
@@ -399,8 +406,7 @@
                         <!-- Zombie Venenoso -->
                         <article class="tarjeta-ruleta" id="en-zposion">
                             <figure>
-                                <img src="recursos\HL2\Zposion.jfif" alt="Zombie Venenoso" width="200"
-                                    height="150">
+                                <img src="recursos\HL2\Zposion.jfif" alt="Zombie Venenoso" width="200" height="150">
                                 <figcaption><b>Zombie Venenoso</b></figcaption>
                             </figure>
                             <details>

@@ -6,6 +6,10 @@
     <title>Half-Life Wiki Vista Principal</title>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-image: url('recursos/alyx/images.jfif');
             background-size: cover;
@@ -71,6 +75,10 @@
             scroll-snap-type: x mandatory;
             padding: 15px 5px 25px 5px;
             scrollbar-width: thin;
+        }
+
+        .tarjeta-ruleta {
+            scroll-margin-top: 150px;
         }
 
         .tarjeta-ruleta {
@@ -150,6 +158,7 @@
                         <li><a href="#enemi">Enemigos</a></li>
                         <li><a href="#aside">Enlaces de interes</a></li>
                         <li><a href="#info">Informacion de Utilidad</a></li>
+                        <li><a href="#formulario">Deja tu comentario</a></li>
                     </ol>
                 </nav>
 
@@ -176,7 +185,7 @@
                 <!-- Listas de Personajes y Enemigos/ ruleta -->
                 <div id="pe">
                     <h2>Personajes Principales</h2>
-                    
+
                     <nav class="indice-alfabetico" aria-label="Índice alfabético de personajes">
                         <span>Filtrar:</span>
                         <a href="#char-alyx">A</a>
@@ -243,7 +252,7 @@
                 <!-- Enemigos -->
                 <div id="enemi">
                     <h2>Enemigos y Amenazas de la Zona de Cuarentena</h2>
-                    
+
                     <nav class="indice-alfabetico" aria-label="Índice alfabético de enemigos">
                         <span>Filtrar:</span>
                         <a href="#en-grunt">G</a>
@@ -387,7 +396,7 @@
                 <section>
                     <br>
                     <h3>Deja tu opinión sobre el juego</h3>
-                    <form action="/api/feedback" method="POST">
+                    <form action="/api/feedback" method="POST" id="formulario">
                         <fieldset>
                             <legend>Formulario de Feedback</legend>
                             <p>
@@ -409,6 +418,18 @@
                 </section>
             </article>
         </section>
+        <section id="seccion-feedback">
+            <br>
+            <h3>Comentarios de la Comunidad</h3>
+
+            <!-- listas de comentarios -->
+            <div id="muro-comentarios" style="margin-bottom: 20px;">
+
+
+            </div>
+
+
+        </section>
     </main>
 
     <br>
@@ -429,6 +450,29 @@
             Desarrollado por el equipo de ingeniería para la cátedra de tecnologías web.
         </address>
     </footer>
+
+
+    <script>
+        // Carga dinamica de comentarios desde la api
+        fetch('/api/comentarios')
+            .then(res => res.json())
+            .then(data => {
+                const muro = document.getElementById('muro-comentarios');
+                if (data.comentarios && data.comentarios.length > 0) {
+                    muro.innerHTML = '';
+                    data.comentarios.forEach(c => {
+                        let estrellas = '★'.repeat(c.valoracion);
+                        muro.innerHTML += `
+                            <article style="background: rgba(255, 255, 255, 0.6); padding: 10px; border-radius: 6px; margin-bottom: 10px;">
+                                <p><strong>${c.nombre}</strong> (Calificacion: ${estrellas})</p>
+                                <p><small>${c.opinion}</small></p>
+                            </article>
+                        `;
+                    });
+                }
+            })
+            .catch(err => console.error("Error al cargar comentarios:", err));
+    </script>
 </body>
 
 </html>

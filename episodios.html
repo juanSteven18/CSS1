@@ -6,6 +6,10 @@
     <title>Half-Life Wiki Vista Principal</title>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-image: url('recursos/HL2/fongo.jfif');
             background-size: cover;
@@ -71,6 +75,10 @@
             scroll-snap-type: x mandatory;
             padding: 15px 5px 25px 5px;
             scrollbar-width: thin;
+        }
+
+        .tarjeta-ruleta {
+            scroll-margin-top: 150px;
         }
 
         .tarjeta-ruleta {
@@ -175,7 +183,7 @@
                 <!-- Listas de Personajes y Enemigos / ruleta -->
                 <div id="pe">
                     <h2>Personajes Principales y Nuevas Incorporaciones</h2>
-                    
+
                     <nav class="indice-alfabetico" aria-label="Índice alfabético de personajes">
                         <span>Filtrar:</span>
                         <a href="#char-magnusson">A</a>
@@ -200,7 +208,8 @@
 
                         <article class="tarjeta-ruleta" id="char-eli-kleiner">
                             <figure>
-                                <img src="recursos\HL2\criko.jfif" alt="Dr. Eli Vance y Dr. Isaac Kleiner" width="200" height="150">
+                                <img src="recursos\HL2\criko.jfif" alt="Dr. Eli Vance y Dr. Isaac Kleiner" width="200"
+                                    height="150">
                                 <figcaption><b>Dr. Eli Vance y Dr. Isaac Kleiner</b></figcaption>
                             </figure>
                             <details>
@@ -229,7 +238,7 @@
 
                 <div id="enemi">
                     <h2>Nuevos Enemigos y Variantes</h2>
-                    
+
                     <nav class="indice-alfabetico" aria-label="Índice alfabético de enemigos">
                         <span>Filtrar:</span>
                         <a href="#en-asesor">A</a>
@@ -241,7 +250,8 @@
                         <!-- Hormiga León Escupidora -->
                         <article class="tarjeta-ruleta" id="en-hormiga">
                             <figure>
-                                <img src="recursos\Episodios\escupidoras.jfif" alt="Hormiga León Escupidora" width="200" height="150">
+                                <img src="recursos\Episodios\escupidoras.jfif" alt="Hormiga León Escupidora" width="200"
+                                    height="150">
                                 <figcaption><b>Hormiga León Escupidora (Worker)</b></figcaption>
                             </figure>
                             <details>
@@ -257,7 +267,8 @@
                         <!-- Cazador Combine -->
                         <article class="tarjeta-ruleta" id="en-cazador">
                             <figure>
-                                <img src="recursos\Episodios\raptors.jfif" alt="Cazador Combine" width="200" height="150">
+                                <img src="recursos\Episodios\raptors.jfif" alt="Cazador Combine" width="200"
+                                    height="150">
                                 <figcaption><b>Cazador de la Alianza (Raptor)</b></figcaption>
                             </figure>
                             <details>
