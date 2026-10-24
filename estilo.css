@@ -1,0 +1,456 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap');
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+
+  div:has(audio) {
+      background-color: rgba(255, 255, 255, 0.85);
+      max-width: 950px;
+      margin: 20px auto;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      border-left: 4px solid #3b82f6;
+  }
+
+  audio {
+      width: 100%;
+      max-width: 450px;
+      height: 35px;
+      outline: none;
+  }
+
+
+  header {
+      background-color: rgb(248, 243, 243);
+      max-width: 950px;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      border-top: 4px solid #f97316;
+
+  }
+
+
+  header figure figcaption b {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+  }
+
+
+  header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+  }
+
+  header nav li a {
+      color: #1e2938;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+  }
+
+  header nav li a:hover {
+      color: #f97316;
+  }
+
+  /* Seccion de Indice de Contenido y Descripcion convertidas en tarjetas claras */
+  main>section>article>nav:nth-of-type(1),
+  div#desc {
+      background-color: #ffffff;
+      padding: 22px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+
+  body {
+      background-image: url('recursos/HL1/fondo.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #1a1a1a;
+      color: #222;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #1f2937;
+      letter-spacing: 0.2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0f172a;
+      margin-top: 1.2em;
+      margin-bottom: 0.5em;
+  }
+
+  h1 {
+      font-size: 2.2rem;
+      border-bottom: 3px solid #f97316;
+      padding-bottom: 8px;
+      display: inline-block;
+  }
+
+  h2 {
+      font-size: 1.6rem;
+      border-left: 4px solid #3b82f6;
+      padding-left: 10px;
+  }
+
+  h3 {
+      font-size: 1.25rem;
+      color: #334155;
+  }
+
+
+  p,
+  li {
+      font-size: 1rem;
+      color: #334155;
+  }
+
+
+  q,
+  blockquote {
+      font-style: italic;
+      color: #475569;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 4px 10px;
+      border-radius: 4px;
+      border-left: 3px solid #f97316;
+  }
+
+
+  table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 15px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+  }
+
+  th,
+  td {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.95rem;
+  }
+
+  th {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      width: 35%;
+  }
+
+  td {
+      color: #334155;
+      background-color: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+  }
+
+
+  tr:last-child td {
+      border-bottom: none;
+  }
+
+
+  main,
+  footer {
+      background-color: rgba(236, 191, 161, 0.993);
+      max-width: 950px;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  section article {
+      background-color: rgba(252, 241, 232, 0.85);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  article article {
+      background-color: #faf2eae3;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  section article>img {
+      width: 100%;
+      max-height: 900px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin: 15px auto;
+  }
+
+
+  main article nav ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+  }
+
+  main article nav ol li {
+      counter-increment: none;
+  }
+
+  main article nav ol li a {
+      background-color: #f1f5f9;
+      padding: 6px 14px;
+      border-radius: 6px;
+      color: #334155;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.2s, color 0.2s;
+      border: 1px solid #e2e8f0;
+  }
+
+  main article nav ol li a:hover {
+      background-color: #f97316;
+      color: #ffffff;
+      border-color: #f97316;
+  }
+
+
+  aside {
+      background-color: #ffffff;
+      padding: 22px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  /* Estilo de botones para los enlaces de interes en el aside */
+  aside ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+  }
+
+  aside ul li a {
+      background-color: #f1f5f9;
+      padding: 6px 14px;
+      border-radius: 6px;
+      color: #334155;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.2s, color 0.2s;
+      border: 1px solid #e2e8f0;
+  }
+
+  aside ul li a:hover {
+      background-color: #f97316;
+      color: #ffffff;
+      border-color: #f97316;
+  }
+
+  /* --- Estilos para la ruleta / carrusel --- */
+  .indice-alfabetico {
+      background: rgba(255, 255, 255, 0.4);
+      padding: 8px 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.9rem;
+  }
+
+  .indice-alfabetico a {
+      color: #1a1a1a;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.7);
+      transition: background 0.2s, color 0.2s;
+  }
+
+  .indice-alfabetico a:hover {
+      background: #222;
+      color: #fff;
+  }
+
+  .ruleta-carrusel {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 15px 5px 25px 5px;
+      scrollbar-width: thin;
+  }
+
+  .tarjeta-ruleta {
+      scroll-margin-top: 150px;
+  }
+
+  .tarjeta-ruleta {
+      flex: 0 0 240px;
+      scroll-snap-align: center;
+      background: rgba(245, 245, 245, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: c 8px 32px 0 rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .tarjeta-ruleta:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+      z-index: 5;
+  }
+
+  .tarjeta-ruleta img {
+      border-radius: 6px;
+      object-fit: cover;
+      width: 100%;
+      height: 150px;
+  }
+
+  footer {
+      background-color: #000000;
+      color: #cbd5e1;
+      max-width: 950px;
+      margin: 40px auto 20px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(247, 7, 7, 0.466);
+      font-size: 0.9rem;
+  }
+
+  .footer-contenido {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(230, 46, 46, 0.1);
+  }
+
+  .footer-columna {
+      flex: 1;
+      min-width: 220px;
+  }
+
+  .footer-columna h4 {
+      color: #f97316;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+  }
+
+  .footer-columna p,
+  .footer-columna address {
+      font-style: normal;
+      line-height: 1.5;
+      color: #7f99bd;
+  }
+
+  .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .footer-links li {
+      margin-bottom: 8px;
+  }
+
+  .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+      color: #f97316;
+  }
+
+  .footer-bottom {
+      text-align: center;
+      color: #64748b;
+      font-size: 0.8rem;
+      line-height: 1.4;
+  }
+
+  .footer-bottom p {
+      margin: 5px 0;
+      color: #64748b;
+  }
+
+  /*Arreglo para hl2, episodios y alyx*/
+  main.vista-azul {
+      background-color: rgba(120, 150, 177, 0.95);
+  }
+/*Arreglos para hl2*/
+  section article.arAzul {
+      background-color: rgba(182, 212, 238, 0.95);
+  }
+
+  article.arConsola {
+      background-color: rgba(217, 229, 241, 0.95);
+  }
+/*fondo para hl2 y episodios*/
+  body.hl2 {
+      background-image: url('recursos/HL2/fondo2.jpg');
+  }
+
+  footer.foohl2{
+    box-shadow: 0 10px 25px rgba(39, 128, 211, 0.555);
+  }
+
+/*fondo para alyx*/
+body.alxy{
+    background-image: url('recursos/alyx/images.jfif');
+}
