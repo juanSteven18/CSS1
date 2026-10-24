@@ -5,111 +5,10 @@
     <meta charset="UTF-8">
     <title>Half-Life Wiki Vista Principal</title>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-image: url('recursos/HL2/fongo.jfif');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: #1a1a1a;
-            color: #222;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        header,
-        main,
-        footer {
-            background-color: #5B7C99;
-            max-width: 950px;
-            margin: 20px auto;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        section article {
-            background-color: rgba(220, 237, 241, 0.8);
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-
-        /* --- estilos para el carrusel --- */
-        .indice-alfabetico {
-            background: rgba(255, 255, 255, 0.4);
-            padding: 8px 15px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            font-size: 0.9rem;
-            flex-wrap: wrap;
-        }
-
-        .indice-alfabetico a {
-            color: #1a1a1a;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 3px 8px;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.7);
-            transition: background 0.2s, color 0.2s;
-        }
-
-        .indice-alfabetico a:hover {
-            background: #222;
-            color: #fff;
-        }
-
-        .ruleta-carrusel {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding: 15px 5px 25px 5px;
-            scrollbar-width: thin;
-        }
-
-        .tarjeta-ruleta {
-            scroll-margin-top: 150px;
-        }
-
-        .tarjeta-ruleta {
-            flex: 0 0 240px;
-            scroll-snap-align: center;
-            background: rgba(220, 237, 241, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .tarjeta-ruleta:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
-            z-index: 5;
-        }
-
-        .tarjeta-ruleta img {
-            border-radius: 6px;
-            object-fit: cover;
-            width: 100%;
-            height: 150px;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
-<body>
+<body class="hl2">
     <!-- Encabezado -->
     <header>
         <figure>
@@ -126,7 +25,7 @@
     </header>
 
     <!-- Contenido -->
-    <main>
+    <main class="vista-azul">
 
         <div style="text-align: center; margin: 15px 0;">
             <p><small>Banda sonora de ambientacion:</small></p>
@@ -136,7 +35,7 @@
         </div>
         <!-- Seccion principal -->
         <section>
-            <article>
+            <article class="arAzul">
                 <h1>Half-Life 2</h1>
                 <p><q>El hombre adecuado en el sitio equivocado puede cambiar el rumbo del mundo.</q> — <strong>The
                         G-Man</strong></p>
@@ -461,8 +360,10 @@
                         <li><a href="https://store.steampowered.com" target="_blank">Página de Steam de Half-Life</a>
                         </li>
                     </ul>
+                    <br>
+                    <br>
 
-                    <article>
+                    <article class="arConsola">
                         <h3>Consola de Desarrollador</h3>
                         <p>¿Sabías que puedes habilitar la consola presionando la tecla <kbd>~</kbd> en el juego? Aquí
                             tienes algunos comandos clásicos del motor Source:</p>
@@ -501,23 +402,46 @@
             </article>
         </section>
     </main>
-    <br>
-    <br>
-    <br>
 
     <!-- Pie de pagina -->
-    <footer>
-        <section>
-            <p>&copy; 2026 Half-Life Wiki - Proyecto Académico.</p>
-            <p><small><b>Aclaratoria de autoría y derechos:</b> Todos los recursos multimedia, imágenes, logotipos y
-                    referencias textuales utilizados en este sitio web pertenecen en su totalidad a sus respectivos
-                    dueños y creadores (© Valve Corporation, Fandom Inc.). Este material ha sido recopilado con fines
-                    estrictamente educativos, informativos y sin ánimo de lucro para el desarrollo de una práctica
-                    universitaria.</small></p>
-        </section>
-        <address>
-            Desarrollado por el equipo de ingeniería para la cátedra de tecnologías web.
-        </address>
+    <footer class="foohl2">
+        <div class="footer-contenido">
+            <!-- Columna 1: Informacion del Proyecto -->
+            <div class="footer-columna">
+                <h4>Half-Life Wiki</h4>
+                <p>Proyecto académico enfocado en el análisis, historia y documentación interactiva del universo creado
+                    por Valve Corporation.</p>
+            </div>
+
+            <!-- Columna 2: Navegacion Rapida -->
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Half-Life</a></li>
+                    <li><a href="hl2.html">Half-Life 2</a></li>
+                    <li><a href="episodios.html">Episodios</a></li>
+                    <li><a href="alyx.html">Half-Life Alyx</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Datos Academicos -->
+            <div class="footer-columna">
+                <h4>Desarrollo</h4>
+                <address>
+                    Cátedra de Tecnologías Web<br>
+                    Escuela de Ingeniería de Sistemas<br>
+                    <strong>Universidad Valle del Momboy</strong>
+                </address>
+            </div>
+        </div>
+
+        <!-- Linea de derechos y aclaratoria legal -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Half-Life Wiki — Proyecto de Ingeniería sin ánimo de lucro.</p>
+            <p><small><b>Aclaratoria:</b> Todos los recursos multimedia, nombres e imágenes pertenecen a sus respectivos
+                    dueños (© Valve Corporation, Fandom Inc.). Contenido utilizado estrictamente con fines
+                    educativos.</small></p>
+        </div>
     </footer>
 </body>
 
